@@ -1,2 +1,16 @@
-package PACKAGE_NAME;public class Jogo {
+public class Jogo {
+
+    public String jogo;
+
+
+
+
+
+    public int guessnumber () {
+
+        return Settings.aleatorio();
+
+    }
+
+
 }

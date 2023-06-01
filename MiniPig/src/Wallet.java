@@ -1,14 +1,17 @@
-public class Pig {
+public class Wallet {
 
-
-    private int money;
+    private int money = 0;
 
     public int getMoney() {
         return money;
     }
 
-    // returns the amount of money withdraw
-    public int withdraw(int money) {
+    public void add(int money) {
+        this.money += money;
+    }
+
+    // returns the money removed from the wallet
+    public int use(int money) {
 
         // exception case handling
         if (money > this.money) {
@@ -18,19 +21,15 @@ public class Pig {
         }
 
         // normal case
-        this.money = this.money - money;
+        this.money -= money;
         return money;
+
     }
 
-    public void deposit(int money) {
-        this.money += money;
-    }
-
-    @Override
     public String toString() {
-        return "Pig{" +
+        return "Wallet{" +
                 "money=" + money +
                 '}';
-
     }
+
 }
