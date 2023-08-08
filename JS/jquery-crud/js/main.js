@@ -52,26 +52,6 @@ $(document).ready(function () {
     });
     }
 
-
-   /* function postAjax(){
-
-$.ajax({
-    url: 'http://localhost:8080/javabank5/api/customer',
-    type: 'POST',
-    data: JSON.stringify({
-        firstName: 'ferrao',
-        lastName: 'master',
-        email: 'rui.ferrao@academiadecodigo.org',
-        phone: '919579919'
-    }),
-    async: true,
-    contentType: 'application/json',
-    success: successCallback,
-    error: errorCallback
-});
-
-}*/
-
 function resetCamps(){
 
             $('#firstName').val(''),
