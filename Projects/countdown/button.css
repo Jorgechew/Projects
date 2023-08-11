@@ -14,12 +14,17 @@ body{
 
 }
 
+.text {
+  color: linear-gradient(120deg, #39d390d8, #3f66a8d8)
+
+}
+
 .relogio{
   display: flex;
   align-items: center;
   justify-content: space-around;
   height: 200px;
-  width: 550px;
+  width: 750px;
   background: transparent;
   border-radius: 3px;
   box-shadow: 0px 8px 10px rgba(0,0,0,.5);

@@ -5,7 +5,11 @@ const minutos = document.getElementById('minutos');
 const segundos = document.getElementById('segundos');
 
 const relogio = setInterval(function time() {
+
+    var countDownDate = new Date();
+
     let dataToday = new Date();
+
     let hr = dataToday.getHours();
     let min = dataToday.getMinutes();
     let seg = dataToday.getSeconds();
