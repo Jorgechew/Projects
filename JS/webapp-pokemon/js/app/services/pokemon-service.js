@@ -10,39 +10,47 @@ define(function () {
         fetch(url)
             .then(function (response) {
 
+                console.log(response);
                 return response.json();
 
             }).then(function (pokemonData) {
 
-                //console.log(pokemonData);
-                
+
+                console.log(pokemonData);
+
                 fetch(pokemonData.results[num].url)
                     .then(function (response) {
                         return response.json();
                     }).then(pokemon => {
-                        var pokemonName = pokemon.name;
+                        var pokemonName = pokemon.name.toUpperCase();
                         var pokemonId = pokemon.id;
                         var pokemonType = pokemon.types.map(function (type) {
                             return type.type.name;
                         });
 
-                
+
+                        var pokemonMoves = pokemon.moves.map(function (move) {
+                            return move.move.name;
+                        });
+
+
 
                         var pokemonImg = pokemon.sprites.front_default;
                         fetch(pokemon.species.url)
                             .then(function (response) {
                                 return response.json();
                             })
-
-
-                        pokedex[num] = { "name": pokemonName, "type": pokemonType, "id": pokemonId, "img": pokemonImg };
-
-                        callback(pokedex[num]);
+                            .then(pokemon => {
+                                var pokeDesc = pokemon.flavor_text_entries[6].flavor_text;
+                                pokedex[num] = { "name": pokemonName, "type": pokemonType, "id": pokemonId, "img": pokemonImg, "moves": pokemonMoves, "desc": pokeDesc};
+                                
+                                callback(pokedex[num]);
+                            });
                     })
 
 
             })
-        
+
     }
 
     return externals;

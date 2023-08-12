@@ -1,4 +1,4 @@
-define(['views/pokemon-view', 'services/pokemon-service'],function (
+   define(['views/pokemon-view', 'services/pokemon-service'],function (
     pokemonView,
     pokemonService
 ) {
