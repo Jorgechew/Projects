@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CountDown</title>
+
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="stylesheet" href="/styles.css">
+
+  <meta name="theme-color" content="#fafafa">
+  
+</head>
+<body> 
+  
+  <div container="container">
+    
+   <audio controls>
+      <source src="src/finalCount.mp3" type="audio/mpeg"/>
+    </audio>    
+   
+
+    <p>9 : 3 1 </p>
+
+  <div Text>
+   <h1> COUNT DOWN </h1>
+</div>
+    <div class="relogio">
+
+      <div>
+        <span id ="days"> 00 </span>
+        <span class="tempo"> Days</span>
+      </div>
+      
+      <div>
+        <span id="hours">00</span>
+        <span class="tempo">Hours</span>
+      </div>	
+
+      <div>
+        <span id="minutes">00</span>
+        <span class="tempo">Minutes</span>
+      </div>	
+      
+      <div>
+        <span id="seconds">00</span>
+        <span class="tempo">Seconds</span>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </div>
+    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+</html>
