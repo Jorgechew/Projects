@@ -6,7 +6,7 @@ const minutesEl = document.getElementById('minutes');
 const secondsEl = document.getElementById('seconds');
 const daysEl = document.getElementById('days');
 
-const countDownDate = "4 Sept 2023 09:31:00";
+const countDownDate = "8 Sept 2023 09:31:00";
 
  function countdown(){
 
